@@ -34,7 +34,7 @@ namespace MDTools
             foreach (var line in data)
             {
                 if (string.IsNullOrEmpty(line.Trim())) continue;
-                if (line[0] == '#') continue;
+                if (line.Trim()[0] == '#') continue;
 
                 var dat = line.Trim().Replace('.', ',').Split().Where(d => !string.IsNullOrEmpty(d)).ToArray();
 
